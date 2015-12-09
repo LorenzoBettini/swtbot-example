@@ -3,6 +3,7 @@ package swtbot.example.tests;
 import static org.eclipse.swtbot.swt.finder.waits.Conditions.shellCloses;
 
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.AfterClass;
@@ -18,7 +19,15 @@ public class SampleMenuTest {
 	@BeforeClass
 	public static void initBot() {
 		bot = new SWTWorkbenchBot();
-		bot.viewByTitle("Welcome").close();
+		closeWelcomePage();
+	}
+
+	private static void closeWelcomePage() {
+		for (SWTBotView view : bot.views()) {
+			if (view.getTitle().equals("Welcome")) {
+				view.close();
+			}
+		}
 	}
 
 	@AfterClass
