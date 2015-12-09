@@ -9,6 +9,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>../swtbot.example.menu</module>
+		<module>../swtbot.example.view</module>
 		<module>../swtbot.example.tests</module>
 	</modules>
 
