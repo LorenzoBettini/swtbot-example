@@ -18,6 +18,7 @@ public class SampleMenuTest {
 	@BeforeClass
 	public static void initBot() {
 		bot = new SWTWorkbenchBot();
+		bot.viewByTitle("Welcome").close();
 	}
 
 	@AfterClass
