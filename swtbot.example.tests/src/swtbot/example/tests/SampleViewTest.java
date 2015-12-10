@@ -5,6 +5,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
+import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.WorkbenchException;
 import org.junit.AfterClass;
@@ -46,8 +47,9 @@ public class SampleViewTest {
 		Display.getDefault().syncExec(new Runnable() {
 			public void run() {
 				try {
-					PlatformUI.getWorkbench().showPerspective(JavaUI.ID_PERSPECTIVE,       
-					         PlatformUI.getWorkbench().getActiveWorkbenchWindow());
+					IWorkbench workbench = PlatformUI.getWorkbench();
+					workbench.showPerspective(JavaUI.ID_PERSPECTIVE,
+							workbench.getActiveWorkbenchWindow());
 				} catch (WorkbenchException e) {
 					e.printStackTrace();
 				}
