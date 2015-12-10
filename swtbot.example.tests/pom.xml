@@ -50,7 +50,7 @@
 				<configuration>
 					<useUIHarness>true</useUIHarness>
 					<useUIThread>false</useUIThread>
-					<product>org.eclipse.sdk.ide</product>
+					<product>org.eclipse.platform.ide</product>
 					<!-- tycho.testArgLine repeated to re-use the configuration for argLine 
 						for jacoco agent -->
 					<argLine>${tycho.testArgLine} -Dorg.eclipse.swtbot.search.timeout=10000</argLine>
