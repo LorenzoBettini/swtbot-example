@@ -17,10 +17,6 @@
 		<tycho-version>0.24.0</tycho-version>
 		<eclipse-repo.url>http://download.eclipse.org/releases/mars</eclipse-repo.url>
 		<swtbot-repo.url>http://download.eclipse.org/technology/swtbot/releases/latest</swtbot-repo.url>
-
-		<jacoco-version>0.7.4.201502262128</jacoco-version>
-
-		<jacoco.reportPath>${project.basedir}/../target/jacoco.exec</jacoco.reportPath>
 	</properties>
 
 	<repositories>
@@ -46,29 +42,6 @@
 				<extensions>true</extensions>
 			</plugin>
 
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco-version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<configuration>
-							<!-- Where to put jacoco coverage report -->
-							<destFile>${jacoco.reportPath}</destFile>
-							<includes>
-								<include>swtbot.example.*</include>
-							</includes>
-							<excludes>
-								<exclude>**/Test*.java</exclude>
-							</excludes>
-							<append>true</append>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 </project>
