@@ -2,7 +2,6 @@ package swtbot.example.tests;
 
 import static org.eclipse.swtbot.swt.finder.waits.Conditions.shellCloses;
 
-import org.eclipse.jdt.ui.JavaUI;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
@@ -89,7 +88,7 @@ public class SampleViewTest {
 			public void run() {
 				try {
 					IWorkbench workbench = PlatformUI.getWorkbench();
-					workbench.showPerspective(JavaUI.ID_PERSPECTIVE,
+					workbench.showPerspective("org.eclipse.jdt.ui.JavaPerspective",
 							workbench.getActiveWorkbenchWindow());
 				} catch (WorkbenchException e) {
 					e.printStackTrace();

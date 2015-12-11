@@ -11,6 +11,8 @@
 		<module>../swtbot.example.targetplatform</module>
 		<module>../swtbot.example.menu</module>
 		<module>../swtbot.example.view</module>
+		<module>../swtbot.example.feature</module>
+		<module>../swtbot.example.tests.feature</module>
 		<module>../swtbot.example.tests</module>
 	</modules>
 

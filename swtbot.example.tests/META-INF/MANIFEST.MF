@@ -5,7 +5,4 @@ Bundle-SymbolicName: swtbot.example.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Lorenzo Bettini
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Require-Bundle: org.eclipse.swtbot.go;bundle-version="2.3.0",
- swtbot.example.menu;bundle-version="1.0.0",
- org.eclipse.jdt.ui;bundle-version="3.11.1",
- swtbot.example.view;bundle-version="1.0.0"
+Require-Bundle: org.eclipse.swtbot.go;bundle-version="2.3.0"

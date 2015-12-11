@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="swtbot.example.tests.feature"
+      label="Sample Tests Feature"
+      version="1.0.0.qualifier"
+      provider-name="Lorenzo Bettini">
+
+   <description url="http://www.example.com/description">
+      This feature defines all the additional dependencies that are needed to execute our SWTBot tests
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="swtbot.example.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import feature="org.eclipse.rcp" version="4.5.1.v20150904-0015"/>
+   </requires>
+
+</feature>
