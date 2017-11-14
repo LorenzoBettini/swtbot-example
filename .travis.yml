@@ -6,13 +6,11 @@ jdk: oraclejdk8
 
 matrix:
   include:
-  - env: TARGET_FILE_NAME=neon
+  - env: TARGET_FILE_NAME=neon DISPLAY=:99.0
 
 cache:
   directories:
   - $HOME/.m2
-
-env: DISPLAY=:99.0
 
 install: true
 
