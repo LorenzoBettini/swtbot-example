@@ -23,7 +23,7 @@
 
    <requires>
       <import plugin="org.eclipse.jdt.ui"/>
-      <import feature="org.eclipse.rcp" version="4.5.1.v20150904-0015"/>
+      <import feature="org.eclipse.rcp"/>
    </requires>
 
 </feature>
