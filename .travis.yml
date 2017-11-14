@@ -27,4 +27,5 @@ before_script:
  
 script:
  - export
- - mvn -f swtbot.example.parent/pom.xml clean verify -Dtarget-file-name=$TARGET_FILE_NAME
+ - echo $TARGET_FILE_NAME
+ - mvn -f swtbot.example.parent/pom.xml -Dtarget-file-name=$TARGET_FILE_NAME clean verify
