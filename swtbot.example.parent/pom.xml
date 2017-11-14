@@ -18,7 +18,7 @@
 
 	<properties>
 		<tycho-version>0.25.0</tycho-version>
-		<target-file-name>neon</target-file-name>
+		<target-file-name>oxygen</target-file-name>
 	</properties>
 
 	<build>
