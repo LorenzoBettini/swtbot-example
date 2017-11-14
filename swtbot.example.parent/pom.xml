@@ -23,7 +23,6 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -44,9 +43,26 @@
 							<classifier>${target-file-name}</classifier>
 						</artifact>
 					</target>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<includePackedArtifacts>true</includePackedArtifacts>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 </project>
