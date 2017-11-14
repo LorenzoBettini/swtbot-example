@@ -6,13 +6,11 @@ jdk: oraclejdk8
 
 matrix:
   include:
-  - env: PROFILE=neon
+  - env: PROFILE=neon DISPLAY=:99.0
 
 cache:
   directories:
   - $HOME/.m2
-
-env: DISPLAY=:99.0
 
 install: true
 
