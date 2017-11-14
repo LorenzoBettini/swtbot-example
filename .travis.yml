@@ -4,6 +4,10 @@ language: java
 
 jdk: oraclejdk8
 
+matrix:
+  include:
+  - env: TARGET_FILE_NAME=neon
+
 cache:
   directories:
   - $HOME/.m2
@@ -19,8 +23,8 @@ addons:
 
 before_script:
  - sh -e /etc/init.d/xvfb start
- - mutter --sm-disable --replace 2> metacity.err &
+ - mutter --sm-disable --replace 2> mutter.err &
  
 script:
  - export
- - mvn -f swtbot.example.parent/pom.xml clean verify
+ - mvn -f swtbot.example.parent/pom.xml clean verify -Dtarget-file-name=$TARGET_FILE_NAME
