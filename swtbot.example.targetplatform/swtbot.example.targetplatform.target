@@ -6,7 +6,7 @@
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/mars/"/>
+<repository location="http://download.eclipse.org/releases/neon/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.ide.feature.group" version="0.0.0"/>

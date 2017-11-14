@@ -62,6 +62,7 @@ public class SampleViewTest {
 
 	@Test
 	public void testViewToolbar() {
+		bot.viewByTitle("Sample View");
 		bot.toolbarButtonWithTooltip("Action 1 tooltip").click();
 		assertDialog("Action 1 executed");
 		bot.toolbarButtonWithTooltip("Action 2 tooltip").click();
