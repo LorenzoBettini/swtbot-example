@@ -8,6 +8,7 @@ matrix:
   include:
   - env: TARGET_FILE_NAME=oxygen DISPLAY=:99.0
   - env: TARGET_FILE_NAME=neon DISPLAY=:99.0
+  - env: TARGET_FILE_NAME=mars DISPLAY=:99.0
 
 cache:
   directories:
