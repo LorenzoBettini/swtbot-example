@@ -18,6 +18,7 @@
 
 	<properties>
 		<tycho-version>0.25.0</tycho-version>
+		<target-file-name>neon</target-file-name>
 	</properties>
 
 	<build>
@@ -40,6 +41,7 @@
 							<groupId>swtbot.example</groupId>
 							<artifactId>swtbot.example.targetplatform</artifactId>
 							<version>${project.version}</version>
+							<classifier>${target-file-name}</classifier>
 						</artifact>
 					</target>
 				</configuration>
