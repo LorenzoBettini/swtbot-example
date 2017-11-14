@@ -17,12 +17,12 @@
 	</modules>
 
 	<properties>
-		<tycho-version>0.25.0</tycho-version>
+		<tycho-version>1.0.0</tycho-version>
+		<target-file-name>oxygen</target-file-name>
 	</properties>
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -40,11 +40,29 @@
 							<groupId>swtbot.example</groupId>
 							<artifactId>swtbot.example.targetplatform</artifactId>
 							<version>${project.version}</version>
+							<classifier>${target-file-name}</classifier>
 						</artifact>
 					</target>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<includePackedArtifacts>true</includePackedArtifacts>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 </project>
