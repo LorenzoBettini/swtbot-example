@@ -6,7 +6,7 @@ jdk: oraclejdk8
 
 matrix:
   include:
-  - env: TARGET_FILE_NAME=neon
+  - env: PROFILE=neon
 
 cache:
   directories:
@@ -27,5 +27,5 @@ before_script:
  
 script:
  - export
- - echo $TARGET_FILE_NAME
- - mvn -f swtbot.example.parent/pom.xml -Dtarget-file-name=$TARGET_FILE_NAME clean verify
+ - echo $PROFILE
+ - mvn -f swtbot.example.parent/pom.xml -P "$PROFILE" clean verify
