@@ -28,3 +28,6 @@ before_script:
 script:
  - export
  - mvn -f swtbot.example.parent/pom.xml clean verify -Dtarget-file-name=$TARGET_FILE_NAME
+
+after_failure:
+ - cat swtbot.example.tests/target/work/data/.metadata/.log
