@@ -6,10 +6,15 @@ jdk: oraclejdk8
 
 matrix:
   include:
-  - env: TARGET_FILE_NAME=photon DISPLAY=:99.0
+    # always build this environment
   - env: TARGET_FILE_NAME=oxygen DISPLAY=:99.0
+    # only on PR
+  - env: TARGET_FILE_NAME=photon DISPLAY=:99.0
+    if: type IN (pull_request)
   - env: TARGET_FILE_NAME=neon DISPLAY=:99.0
+    if: type IN (pull_request)
   - env: TARGET_FILE_NAME=mars DISPLAY=:99.0
+    if: type IN (pull_request)
 
 cache:
   directories:
